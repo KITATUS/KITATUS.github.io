@@ -47,6 +47,18 @@ The blueprint flow of BP_Door
 
 There are two seperate actors that listen for BP_Door and react differently to showcase how one Event Dispatcher can be used to communicate with many things. 
 
+BP_DoorReport_Text is an actor that waits for the door to shout "My state has been updated!" From here, it uses the information told at this time to decide whether to set the text to "CLOSED" or "OPEN".
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_004.jpg "The blueprint flow of BP_DoorReport_Text"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_004.jpg)
+The blueprint flow of BP_DoorReport_Text
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
+The similar (but visually distinct) BP_DoorReport_Alt listens for the door when the game begins but also creates a dynamic material, so it can change the color when the door shouts about its state. 
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_005.jpg "The blueprint flow of BP_DoorReport_Alt"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_005.jpg)
+The blueprint flow of BP_DoorReport_Alt
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
 ### Example #2 - Damage Volume (Blueprint)
 fdfd
 ### Example #3 - Player Collecting a Coin (C++)
