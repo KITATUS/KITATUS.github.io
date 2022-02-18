@@ -21,7 +21,7 @@ header:
 **Note:** The screenshots used in this guide are from Unreal Engine 5 (Early Access) but everything here is compatible with most previous and future versions of Unreal Engine (4 / 5 / beyond).
 {: .notice--success}
 
-The basic idea behind an Event Dispatcher (Or Delegate in C++ land) is that one thing is shouting something to whoever is listening. 
+The basic idea behind an Event Dispatcher (or Delegate in C++ land) is that one thing is shouting something to whoever is listening. 
 
 We will look at three examples of Event Dispatchers.
 
@@ -77,3 +77,9 @@ fdfd
 ### Creating a C++ Event Dispatcher
 fdfd
 
+## Extras
+### Video
+VIDEO HERE
+
+### Project Files
+The project files for this project (Unreal Engine 5.0 EA) are available here: https://kitatus.github.io/ue4/ue5/eventdispatchersdelegates/
