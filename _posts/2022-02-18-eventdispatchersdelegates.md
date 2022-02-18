@@ -27,7 +27,6 @@ We will look at three examples of Event Dispatchers.
 ### Example #1 - Open Door (Blueprint)
 In this first example, we have multiple uses of Event Dispatchers. The idea here is when the button is pressed, the door should either open and closed. When the door state has been changed, the two objects beside the door should let us know what state the door is in.
 
-[![my_img](/assets/images/tutorials/eventDispatcher/ed_001.jpg)](/assets/images/tutorials/eventDispatcher/ed_001.jpg)
 [![styled-image](/assets/images/tutorials/eventDispatcher/ed_001.jpg "A screenshot of Example 01"){: .align-center style="width: 10%;"}](/assets/images/tutorials/eventDispatcher/ed_001.jpg)
 A screenshot of Example 01.
 {: style="text-align: center; font-size:0.7em;"}
