@@ -18,6 +18,7 @@ The basic idea behind an Event Dispatcher (Or Delegate in C++ land) is that one 
 
 We will look at three examples of Event Dispatchers.
 
+{% capture markdown %}
 ## Examples
 ### Example #1 - Open Door (Blueprint)
 In this first example, we have multiple uses of Event Dispatchers. The idea here is when the button is pressed, the door should either open and closed. When the door state has been changed, the two objects beside the door should let us know what state the door is in.
@@ -35,4 +36,6 @@ fdfd
 
 ### Creating a C++ Event Dispatcher
 fdfd
+
+{% endcapture %}
 
