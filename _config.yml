@@ -57,34 +57,34 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "KITATUS"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "KITATUS is an educational content portal for Unreal Engine and Game Development tutorials, tips 'n tricks."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/KITATUSxFriends"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/KITATUS"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/c/KitatusstudiosCoUkGameDev"
 
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://twitter.com/KITATUSxFriends"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/KITATUS"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/c/KitatusstudiosCoUkGameDev"
 
 defaults:
   # _posts
@@ -94,8 +94,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: true
+      read_time: false
+      comments: false
       share: true
       related: true
   # _pages
