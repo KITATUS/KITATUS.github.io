@@ -28,8 +28,7 @@ We will look at three examples of Event Dispatchers.
 In this first example, we have multiple uses of Event Dispatchers. The idea here is when the button is pressed, the door should either open and closed. When the door state has been changed, the two objects beside the door should let us know what state the door is in.
 
 <figure class="half">
-    <a href="/assets/images/tutorials/eventDispatcher/ed_001.jpg"><img src="/assets/images/tutorials/eventDispatcher/ed_001.jpg"></a>
-    <figcaption>An image of Example #01</figcaption>
+    <a href="/assets/images/tutorials/eventDispatcher/ed_001.jpg" alt="Screenshot of Example 01"><img src="/assets/images/tutorials/eventDispatcher/ed_001.jpg" alt="Screenshot of Example 01"></a>
 </figure>
 
 
