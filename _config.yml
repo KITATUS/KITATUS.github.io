@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: KITATUS
+title: KITATUS | Unreal Engine Game Development Tutorials
+masthead_title: ""
 email: support@kitatusandfriends.co.uk
 description: >- # this means to ignore newlines until "baseurl:"
   KITATUS is an educational content portal for Unreal Engine and
@@ -22,6 +23,7 @@ twitter_username: KITATUSxFriends
 github_username: KITATUS
 minimal_mistakes_skin: "dark"
 search: true
+logo: "/assets/images/T_LongLogo.png"
 
 # Build settings
 markdown: kramdown
@@ -97,7 +99,8 @@ defaults:
       read_time: false
       comments: false
       share: true
-      related: true
+      related: false
+      show_date: false
   # _pages
   - scope:
       path: "_pages"
@@ -105,6 +108,13 @@ defaults:
     values:
       layout: single
       author_profile: true
+
+social:
+  type: Organization
+  name: KITATUS and Friends LTD
+  links:
+    - "https://twitter.com/KITATUSxFriends"
+    - "https://www.facebook.com/KITATUSGameDev"
 
 category_archive:
   type: liquid
