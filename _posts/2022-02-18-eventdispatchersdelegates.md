@@ -25,6 +25,9 @@ We will look at three examples of Event Dispatchers.
 ### Example #1 - Open Door (Blueprint)
 In this first example, we have multiple uses of Event Dispatchers. The idea here is when the button is pressed, the door should either open and closed. When the door state has been changed, the two objects beside the door should let us know what state the door is in.
 
+<img src="/assets/images/tutorials/eventDispatcher/ed_001.jpg" alt="">
+
+
 The button has an Event Dispatcher called “ButtonPressed” and has no knowledge of anybody listening, it will just shout this to anybody listening. This is fired when “Interact” is called from the player character.
 
 ### Example #2 - Damage Volume (Blueprint)
