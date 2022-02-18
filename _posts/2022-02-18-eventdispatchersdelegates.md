@@ -23,7 +23,7 @@ header:
 
 The basic idea behind an Event Dispatcher (or Delegate in C++ land) is that one thing is shouting something to whoever is listening. 
 
-We will look at three examples of Event Dispatchers.
+We will look at two examples; one for a Blueprint Event Dispatcher and one for a C++ Delegate.
 
 ## Examples
 ### Example #1 - Open Door (Blueprint)
@@ -69,8 +69,10 @@ Interacting with the button starts a chain of Event Dispatchers to correctly cha
 fdfd
 
 
+In a future tutorial, we will revisit this system using Interfaces to further simplify the communication between all of the actors in play - which would be the "correct" way of dealing with a situation as presented here. For now, this has been a servicable showcase of Event Dispatchers and how instead of waiting for an object to tell us something (as with Example #01), we can use the Event Dispatcher system to communicate with other objects.
+
 Another point of optimzation you could have done in this situation is to use a shared base class but as you have seen, adding an Event Dispatcher allows us to add this kind of functionality to any actor, mixing and matching different event dispatchers without having to have unused code in your classes.
-### Example #3 - Player Collecting a Coin (C++)
+### Example #2 - Player Collecting a Coin (C++)
 Fdfd
 
 ## How To Create Your Own
