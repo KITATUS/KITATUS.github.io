@@ -2,9 +2,8 @@
 title: "Event Dispatchers (Delegates)"
 date: 2022-02-18T14:55:30-04:00
 categories:
-  - ue4
-  - ue5
-  - tutorial
+  - UE4
+  - UE5
 tags:
   - Tutorial
   - Blueprints
@@ -12,7 +11,7 @@ tags:
 toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
-toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix)
+toc_icon: "gamepad"  # corresponding Font Awesome icon name (without fa prefix)
 excerpt: "A look at how Event Dispatches (and Delegates) work in Unreal Engine and how you can use them to handle communication between multiple actors."
 header:
   overlay_image: /assets/images/tutorials/eventDispatcher/ed_001.jpg
@@ -46,7 +45,7 @@ Within BP_Door, we're saying at the start "Listen for when the button shouts "Bu
 The blueprint flow of BP_Door
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-
+There are two seperate actors that listen for BP_Door and react differently to showcase how one Event Dispatcher can be used to communicate with many things. 
 
 ### Example #2 - Damage Volume (Blueprint)
 fdfd
