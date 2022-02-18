@@ -59,6 +59,12 @@ The similar (but visually distinct) BP_DoorReport_Alt listens for the door when 
 The blueprint flow of BP_DoorReport_Alt
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
+This is an example of a one-way flow of Event Dispatchers, where object A tells Object B who in turn communicates with object C and D. Next, we will look at a different use case of Event Dispatchers; using an Event Dispatcher to provide communication between classes who have no dedicated knowledge of each other.
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_006.jpg "Interacting with the button starts a chain of Event Dispatchers to correctly change and show the state of the door"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_006.jpg)
+Interacting with the button starts a chain of Event Dispatchers to correctly change and show the state of the door.
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
 ### Example #2 - Damage Volume (Blueprint)
 fdfd
 ### Example #3 - Player Collecting a Coin (C++)
