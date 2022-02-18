@@ -9,9 +9,10 @@ tags:
   - Tutorial
   - Blueprints
   - C++
+toc: true
 ---
 
-**Note:** The screenshots used in this guide are from Unreal Engine 5 (Early Access) but everything here is compatible with most previous and future versions of Unreal Engine (4,5 and beyond).
+**Note:** The screenshots used in this guide are from Unreal Engine 5 (Early Access) but everything here is compatible with most previous and future versions of Unreal Engine (4 / 5 / beyond).
 {: .notice--success}
 
 The basic idea behind an Event Dispatcher (Or Delegate in C++ land) is that one thing is shouting something to whoever is listening. 
