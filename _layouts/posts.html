@@ -2,7 +2,7 @@
 layout: archive
 ---
 
-{% include anchor_headings.html html=content anchorBody="#" %}
+{% include toc.html html=content %}
 
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
