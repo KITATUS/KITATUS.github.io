@@ -2,6 +2,7 @@
 title: "Privacy Policy"
 excerpt: "KITATUS and Friends LTD Privacy Policy"
 sitemap: false
+author_profile: false
 permalink: /privacy-policy.html
 ---
 

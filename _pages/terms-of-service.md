@@ -2,6 +2,7 @@
 title: "Terms Of Service"
 excerpt: "KITATUS and Friends LTD Terms Of Service"
 sitemap: false
+author_profile: false
 permalink: /terms-of-service.html
 ---
 
