@@ -39,3 +39,5 @@ fdfd
 
 {% endcapture %}
 
+{% include toc.html html=text base_url="https://kitatus.github.io/" %}
+
