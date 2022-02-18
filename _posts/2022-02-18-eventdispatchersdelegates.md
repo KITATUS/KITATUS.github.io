@@ -65,9 +65,6 @@ This is an example of a one-way flow of Event Dispatchers, where object A tells 
 Interacting with the button starts a chain of Event Dispatchers to correctly change and show the state of the door.
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-### Example #2 - Fire (Blueprint)
-Fdfd
-
 ### Example #2 - Player Collecting a Coin (C++)
 Fdfd
 
