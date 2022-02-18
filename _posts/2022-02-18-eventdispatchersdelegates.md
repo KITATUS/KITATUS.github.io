@@ -19,12 +19,12 @@ header:
   teaser: /assets/images/tutorials/eventDispatcher/ed_001.jpg
 ---
 
+**Note:** The screenshots used in this guide are from Unreal Engine 5 (Early Access) but everything here is compatible with most previous and future versions of Unreal Engine (4 / 5 / beyond).
+{: .notice--success}
+
 The basic idea behind an Event Dispatcher (Or Delegate in C++ land) is that one thing is shouting something to whoever is listening. 
 
 We will look at three examples of Event Dispatchers.
-
-**Note:** The screenshots used in this guide are from Unreal Engine 5 (Early Access) but everything here is compatible with most previous and future versions of Unreal Engine (4 / 5 / beyond).
-{: .notice--success}
 
 ## Examples
 ### Example #1 - Open Door (Blueprint)
