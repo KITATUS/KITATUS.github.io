@@ -34,8 +34,19 @@ In this first example, we have multiple uses of Event Dispatchers. The idea here
 A screenshot of Example 01
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-
 The button has an Event Dispatcher called “ButtonPressed” and has no knowledge of anybody listening, it will just shout this to anybody listening. This is fired when “Interact” is called from the player character.
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_002.jpg "When Interact is triggered, execute our Event Dispatcher and play the button press animation"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_002.jpg)
+When Interact is triggered, execute our Event Dispatcher and play the button press animation
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
+Within BP_Door, we're saying at the start "Listen for when the button shouts "Button Pressed!". When that happens, if we're closed, open us and if we're open close us. After that, play the animation to move the door. When the animation has completed, shout to whoever is listening that our state has changed and send along our new state too.
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_003.jpg "The blueprint flow of BP_Door"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_003.jpg)
+The blueprint flow of BP_Door
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
+
 
 ### Example #2 - Damage Volume (Blueprint)
 fdfd
