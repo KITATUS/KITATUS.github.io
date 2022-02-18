@@ -14,6 +14,8 @@ toc_label: "Table of Contents"
 toc_sticky: true
 toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix)
 excerpt: "A look at how Event Dispatches (and Delegates) work in Unreal Engine and how you can use them to handle communication between multiple actors."
+header:
+  overlay_image: /assets/images/tutorials/eventDispatcher/ed_001.jpg
 ---
 
 The basic idea behind an Event Dispatcher (Or Delegate in C++ land) is that one thing is shouting something to whoever is listening. 
