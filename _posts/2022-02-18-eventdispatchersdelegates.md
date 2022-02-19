@@ -27,19 +27,19 @@ We will look at two examples; one for a Blueprint Event Dispatcher and one for a
 
 ## Examples
 ### Example #1 - Open Door (Blueprint)
-In this first example, we have multiple uses of Event Dispatchers. The idea here is when the button is pressed, the door should either open or closed. When the door state has been changed, the two objects beside the door should let us know what state the door is in.
+In this first example, we have multiple uses of Event Dispatchers. The idea here is when the button is pressed, the door should either open or close. When the door state has been changed, the two objects beside the door should let us know what state the door is in.
 
 [![styled-image](/assets/images/tutorials/eventDispatcher/ed_001.jpg "A screenshot of Example 01"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_001.jpg)
 A screenshot of Example 01
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-The button has an Event Dispatcher called “ButtonPressed” and has no knowledge of anybody listening, it will just shout this to anybody listening. This is fired when “Interact” is called from the player character.
+The button has an Event Dispatcher called “ButtonPressed” and has no knowledge of anybody listening, it will just shout this to anybody. This is fired when “Interact” is called from the player character.
 
 [![styled-image](/assets/images/tutorials/eventDispatcher/ed_002.jpg "When Interact is triggered, execute our Event Dispatcher and play the button press animation"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_002.jpg)
 When Interact is triggered, execute our Event Dispatcher and play the button press animation
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-Within BP_Door, we're saying at the start "Listen for when the button shouts "Button Pressed!". When that happens, if we're closed, open us and if we're open close us. After that, play the animation to move the door. When the animation has completed, shout to whoever is listening that our state has changed and send along our new state too.
+Within BP_Door, we're saying at the start "Listen for when the button shouts "Button Pressed!"". When that happens, if we're closed, open us and if we're open close us. After that, play the animation to move the door. When the animation has completed, shout to whoever is listening that our state has changed and send along our new state too.
 
 [![styled-image](/assets/images/tutorials/eventDispatcher/ed_003.jpg "The blueprint flow of BP_Door"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_003.jpg)
 The blueprint flow of BP_Door
@@ -58,8 +58,6 @@ The similar (but visually distinct) BP_DoorReport_Alt listens for the door when 
 [![styled-image](/assets/images/tutorials/eventDispatcher/ed_005.jpg "The blueprint flow of BP_DoorReport_Alt"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_005.jpg)
 The blueprint flow of BP_DoorReport_Alt
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
-
-This is an example of a one-way flow of Event Dispatchers, where object A tells Object B who in turn communicates with object C and D. Next, we will look at a different use case of Event Dispatchers; using an Event Dispatcher to provide communication between classes who have no dedicated knowledge of each other.
 
 [![styled-image](/assets/images/tutorials/eventDispatcher/ed_006.jpg "Interacting with the button starts a chain of Event Dispatchers to correctly change and show the state of the door"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_006.jpg)
 Interacting with the button starts a chain of Event Dispatchers to correctly change and show the state of the door.
@@ -82,7 +80,7 @@ The parts that are specifically tied to the Delegate:
 
 <script src="https://gist.github.com/KITATUS/12b271322cab2c1f73af5b9486426a95.js"></script>
 
-We mark the UPROPERTY as BlueprintAssignable due to the fact that not only does this mean we can use this Delegate as an Event Dispatcher in Blueprint but we still communicate in C++ land, giving us the best of both worlds.
+We mark the UPROPERTY as BlueprintAssignable due to the fact that not only does this mean we can use this Delegate as an Event Dispatcher in Blueprint but we still can communicate in C++ land, giving us the best of both worlds.
 
 The other parts to this .h file are giving us a mesh so we can see the coin and a sphere component so we can do something when the player overlaps this actor. Just like with the BlueprintAssignable flag, we have added BlueprintNativeEvent to our Overlap function to give us the power of both worlds, allowing us to deal with this overlap either within our .cpp file or in a Blueprint child of this actor.
 
