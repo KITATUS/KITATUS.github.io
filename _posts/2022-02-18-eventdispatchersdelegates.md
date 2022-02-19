@@ -116,10 +116,24 @@ Collecting the coins updates both our Blueprint actor and the C++-backed UMG Wid
 
 ## How To Create Your Own
 ### Creating a Blueprint Event Dispatcher
-fdfd
+To create a Blueprint Event Dispatcher, open the Blueprint in question and head to the MyBlueprint tab (default location: Bottom Left). There is a section named "Event Dispatchers". Click the Plus icon on the section header to create an Event Dispatcher.
 
-### Creating a C++ Event Dispatcher
-fdfd
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_011.jpg "The Event Dispatcher section location"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_011.jpg)
+The Event Dispatcher section location.
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
+Name your Event Dispatcher then if you need to add a variable to it, click the dispatcher and head over to the details panel (Default location: Right). Click the "+" on the Inputs section to create a new variable. Set it, name it and then compile and save and your Event Dispatcher is ready.
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_012.jpg "The Inputs location when you have a selected Event Dispatcher"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_012.jpg)
+The Inputs location when you have a selected Event Dispatcher.
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
+### Creating a C++ Delegate
+In the header above your class, you can add your dispatcher here. If you would like a Blueprint-friendly Delegate use ``` DECLARE_DYNAMIC_MULTICAST_DELEGATE ```. If you need variables, you can use the Params versions; ```DECLARE_DYNAMIC_MULTICAST_DELEGATE_One_Param```, ```DECLARE_DYNAMIC_MULTICAST_DELEGATE_Two_Params``` .etc. It is important to note that variables you introduce to these need ```Variable Type, Variable Name```. Below is three examples of different Multicast Delegates.
+
+```DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCoolDelegate)```
+```DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FStillCoolDelegate, float, fCoolVariableName)```
+```DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FSuperCoolDelegate, float, fCoolVariableName, bool, bCoolVariableBOOL, FVector, vSuperCoolVector)```
 
 ## Extras
 ### Video
