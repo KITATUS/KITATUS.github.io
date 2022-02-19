@@ -135,9 +135,22 @@ In the header above your class, you can add your dispatcher here. If you would l
 ```DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FStillCoolDelegate, float, fCoolVariableName)```
 ```DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FSuperCoolDelegate, float, fCoolVariableName, bool, bCoolVariableBOOL, FVector, vSuperCoolVector)```
 
+As you may have noticed, the first parameter in these Macros is a made up name to call the Delegate.
+
+If only one item should be attached to a delegate, as opposed to as many as possible - you could remove ```MULTICAST```. This would mean your Delegate would be ```DECLARE_DYNAMIC_DELEGATE(FCoolDelegate)```. Remember that this Delegate can only be bound to a single place if you do this.
+
+Dynamic Delegates are slower than regular delegates but they can be found by name in places.
+
+Find where you want this Delegate to belong and if it is Blueprintable, add a UPROPERTY(BlueprintAssignable) macro above the declaration of the variable version of the Delegate. An example of this:
+```UPROPERTY(BlueprintAssignable)	FKFOnCoinPickup OnCoinPickup;```
+
+Your Delegate is now ready to use. If you have set it up as a Blueprintable DYNAMIC_MULTICAST_DELEGATE, you can bind it or call it in Blueprints or in C++
+
+To learn more about delegates, take a look at the Unreal Engine documentation to learn about cool extra things, such as adding return values and the UDELEGATE macro: [Unreal Engine 4 Delegate Documentation](https://docs.unrealengine.com/4.27/en-US/ProgrammingAndScripting/ProgrammingWithCPP/UnrealArchitecture/Delegates/).
+
 ## Extras
 ### Video
 VIDEO HERE
 
 ### Project Files
-The project files for this project (Unreal Engine 5.0 EA) are available here: https://kitatus.github.io/ue4/ue5/eventdispatchersdelegates/
+The project files for this project (Unreal Engine 5.0 EA) are available here: [PROJECT FILES](https://kitatus.github.io/ue4/ue5/eventdispatchersdelegates/)
