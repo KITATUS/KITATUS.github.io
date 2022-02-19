@@ -76,73 +76,11 @@ A screenshot of Example 02.
 
 If we take a look at the AKF_Pickup.h, you can see where we have declared the delegate outside of the class and then used that declaration as a variable in our variable list.
 
-```
-// © 2022 KITATUS and Friends LTD. All Rights Reserved.
-
-#pragma once
-
-#include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
-#include "AKF_Pickup.generated.h"
-
-class USphereComponent;
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FKFOnCoinPickup);
-
-// Another example of a delegate using an Actor reference
-//DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FKFOnActorCoinPickup, AActor*, ActorRef);
-
-UCLASS()
-class KFEVENTDISPATCHERS_API AAKF_Pickup : public AActor
-{
-	GENERATED_BODY()
-public:	
-	AAKF_Pickup();
-
-	UPROPERTY(BlueprintAssignable)
-	FKFOnCoinPickup OnCoinPickup;
-
-	// Another example of a delegate using an Actor reference
-	//UPROPERTY(BlueprintAssignable)
-	//FKFOnActorCoinPickup OnActorCoinPickup;
-
-protected:
-	virtual void BeginPlay() override;
-
-	UPROPERTY()
-	USphereComponent* SphereComp;
-	
-	UPROPERTY(EditAnywhere, Category="Changeables")
-	UStaticMeshComponent* MeshComp;
-
-	UFUNCTION(BlueprintNativeEvent, Category="Overlap")
-	void OverlapStarted(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
-	
-};
-
-```
+<script src="https://gist.github.com/KITATUS/24e5387fc95eb1d304307cc7c6369b74.js"></script>
 
 The parts we are specifically tied to the Delegate:
 
-```
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FKFOnCoinPickup);
-
-UCLASS()
-class KFEVENTDISPATCHERS_API AAKF_Pickup : public AActor
-{
-	GENERATED_BODY()
-
-public:	
-
-	UPROPERTY(BlueprintAssignable)
-	FKFOnCoinPickup OnCoinPickup;
-
-	// Another example of a delegate using an Actor reference
-	//UPROPERTY(BlueprintAssignable)
-	//FKFOnActorCoinPickup OnActorCoinPickup;
-	
-};
-
-```
+<script src="https://gist.github.com/KITATUS/12b271322cab2c1f73af5b9486426a95.js"></script>
 
 
 
