@@ -148,7 +148,7 @@ To learn more about delegates, take a look at the Unreal Engine documentation to
 
 ## Extras
 ### Video
-VIDEO HERE
+{% include video id="OEmGbMEbqZo" provider="youtube" %}
 
 ### Project Files
-The project files for this project (Unreal Engine 5.0 EA) are available here: [PROJECT FILES](https://kitatus.github.io/ue4/ue5/eventdispatchersdelegates/)
+The project files for this project (Unreal Engine 5.0 EA) are available here: [PROJECT FILES](https://github.com/KITATUS/KFEventDispatchers)
