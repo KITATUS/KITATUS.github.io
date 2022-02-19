@@ -27,7 +27,7 @@ We will look at two examples; one for a Blueprint Event Dispatcher and one for a
 
 ## Examples
 ### Example #1 - Open Door (Blueprint)
-In this first example, we have multiple uses of Event Dispatchers. The idea here is when the button is pressed, the door should either open and closed. When the door state has been changed, the two objects beside the door should let us know what state the door is in.
+In this first example, we have multiple uses of Event Dispatchers. The idea here is when the button is pressed, the door should either open or closed. When the door state has been changed, the two objects beside the door should let us know what state the door is in.
 
 [![styled-image](/assets/images/tutorials/eventDispatcher/ed_001.jpg "A screenshot of Example 01"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_001.jpg)
 A screenshot of Example 01
@@ -66,7 +66,85 @@ Interacting with the button starts a chain of Event Dispatchers to correctly cha
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
 ### Example #2 - Player Collecting a Coin (C++)
-Fdfd
+To show the simplicity of what an Event Dispatcher looks like in C++ (It is a Delegate, not an "Event Dispatcher" but works in an almost identical fashion), the second example is a simple coin collection minigame. 
+
+As with the last example, we have an object broadcasting out and then two objects receiving that broadcast and acting accordingly. We've added a seasoning of Blueprint support to allow us to receive the delegate in Blueprint as the important thing in this sample is the broadcasting of information, not what we do with that information itself (as we have already dealt with that in the previous example).
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_007.jpg "A screenshot of Example 02"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_007.jpg)
+A screenshot of Example 02.
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
+If we take a look at the AKF_Pickup.h, you can see where we have declared the delegate outside of the class and then used that declaration as a variable in our variable list.
+
+```
+// © 2022 KITATUS and Friends LTD. All Rights Reserved.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "AKF_Pickup.generated.h"
+
+class USphereComponent;
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FKFOnCoinPickup);
+
+// Another example of a delegate using an Actor reference
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FKFOnActorCoinPickup, AActor*, ActorRef);
+
+UCLASS()
+class KFEVENTDISPATCHERS_API AAKF_Pickup : public AActor
+{
+	GENERATED_BODY()
+public:	
+	AAKF_Pickup();
+
+	UPROPERTY(BlueprintAssignable)
+	FKFOnCoinPickup OnCoinPickup;
+
+	// Another example of a delegate using an Actor reference
+	//UPROPERTY(BlueprintAssignable)
+	//FKFOnActorCoinPickup OnActorCoinPickup;
+
+protected:
+	virtual void BeginPlay() override;
+
+	UPROPERTY()
+	USphereComponent* SphereComp;
+	
+	UPROPERTY(EditAnywhere, Category="Changeables")
+	UStaticMeshComponent* MeshComp;
+
+	UFUNCTION(BlueprintNativeEvent, Category="Overlap")
+	void OverlapStarted(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+	
+};
+
+```
+
+The parts we are specifically tied to the Delegate:
+
+```
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FKFOnCoinPickup);
+
+UCLASS()
+class KFEVENTDISPATCHERS_API AAKF_Pickup : public AActor
+{
+	GENERATED_BODY()
+
+public:	
+
+	UPROPERTY(BlueprintAssignable)
+	FKFOnCoinPickup OnCoinPickup;
+
+	// Another example of a delegate using an Actor reference
+	//UPROPERTY(BlueprintAssignable)
+	//FKFOnActorCoinPickup OnActorCoinPickup;
+	
+};
+
+```
+
+
 
 ## How To Create Your Own
 ### Creating a Blueprint Event Dispatcher
