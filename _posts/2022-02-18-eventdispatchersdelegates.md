@@ -1,5 +1,5 @@
 ---
-title: "Event Dispatchers (Delegates)"
+title: "[UE4/UE5] Event Dispatchers (Delegates)"
 date: 2022-02-18T14:55:30-04:00
 categories:
   - UE4
