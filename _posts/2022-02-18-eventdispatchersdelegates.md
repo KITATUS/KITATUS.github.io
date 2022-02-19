@@ -78,11 +78,41 @@ If we take a look at the AKF_Pickup.h, you can see where we have declared the de
 
 <script src="https://gist.github.com/KITATUS/24e5387fc95eb1d304307cc7c6369b74.js"></script>
 
-The parts we are specifically tied to the Delegate:
+The parts that are specifically tied to the Delegate:
 
 <script src="https://gist.github.com/KITATUS/12b271322cab2c1f73af5b9486426a95.js"></script>
 
+We mark the UPROPERTY as BlueprintAssignable due to the fact that not only does this mean we can use this Delegate as an Event Dispatcher in Blueprint but we still communicate in C++ land, giving us the best of both worlds.
 
+The other parts to this .h file are giving us a mesh so we can see the coin and a sphere component so we can do something when the player overlaps this actor. Just like with the BlueprintAssignable flag, we have added BlueprintNativeEvent to our Overlap function to give us the power of both worlds, allowing us to deal with this overlap either within our .cpp file or in a Blueprint child of this actor.
+
+Over in the .cpp file (AKF_Pickup.cpp), we are setting up the file, creating our components and listening out for the overlap. When the overlap happens, we simple broadcast to anybody listening that we've been picked up.
+
+<script src="https://gist.github.com/KITATUS/1a07dd72021406934392f6e063d05109.js"></script>
+
+The important part of this code we want to look at is the broadcast. 
+
+<script src="https://gist.github.com/KITATUS/6119f638ba2962e22a2f0564959a5207.js"></script>
+
+Heading back into the project, we have placed the C++ class around the map (Map_Example02). We have set the mesh and created two classes - one on the Blueprint side to listen out to the broadcast; BP_PickupCounter (another actor) and the other, a C++ backed UMG_CoinWidget (A UMG) to showcase how we can communicate with the C++ created delegate in both Blueprint and C++. 
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_008.jpg "BP_PickupCounter waits 0.2 seconds before rounding up all the coins in the level to make sure they have all spawned. When they broadcast, we increase the coin amount and update out text"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_008.jpg)
+BP_PickupCounter waits 0.2 seconds before rounding up all the coins in the level to make sure they have all spawned. When they broadcast, we increase the coin amount and update out text.
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
+
+In the C++ source for UMG_CoinWallet (UW_CoinCounter_Base), you'll notice that the only thing reserved for the delegate in the .h is a UFUNCTION (void CoinCollected) that is going to fire when we hear what the broadcast has to say. This needs to have the same variables as what is going to be broadcasted or we won't correctly recieve the broadcast.
+
+<script src="https://gist.github.com/KITATUS/d1b19d5ab7b3016f62e0234c422565b3.js"></script>
+
+Looking at the .cpp, when the widget is created, we cycle through the coins in the world and listen out for their Delegate. When their delegate is triggered, we will call our "CoinCollected" function. This function increases our coin amount and sets the text in the widget to reflect the correct value.
+
+<script src="https://gist.github.com/KITATUS/a98a1168a08a29da057479fa77a1d3b6.js"></script>
+
+There is a lot more to Delegates in C++, especially when you forgo the hooks to make them Blueprint compatible. Not every Delegate has to be a Dynamic Multicast Delegate. However, for our use case (Gameplay), the delegates we've used today are a great introduction to get started with Delegates as a whole. From here, you should be able to imagine some places you can apply this knowledge; such as replacing Tick functions where you're checking values (and the changing of values) to a more Delegated approach.
+
+[![styled-image](/assets/images/tutorials/eventDispatcher/ed_010.jpg "Collecting the coins updates both our Blueprint actor and the C++-backed UMG Widget"){: .align-center style="width: 100%;"}](/assets/images/tutorials/eventDispatcher/ed_010.jpg)
+Collecting the coins updates both our Blueprint actor and the C++-backed UMG Widget.
+{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
 ## How To Create Your Own
 ### Creating a Blueprint Event Dispatcher
