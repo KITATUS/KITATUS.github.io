@@ -35,7 +35,7 @@ For the first example, we are displaying a basic understanding of Blueprint Inte
 A screenshot of Example 01
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-There are three times that the user can place in either the red flame or the blue flame. They react as follows:
+There are three actors that the user can place in either the red flame or the blue flame. They react as follows:
 * Wood - Red fire only
 * Stone - Blue fire only
 * Chair - Both Red and Blue fire
@@ -107,7 +107,9 @@ Specifically in the ```OverlapStarted``` and ```OverlapEnded``` functions, you c
 
 <script src="https://gist.github.com/KITATUS/70f611ba2cde78f08d8b9106b613e1e8.js"></script>
 
-As we have implemented our Interface on the Blueprint side for the character, if we did ``` ICoolInterface* TempCool = Cast<ICoolInterface>(TempActor)```, it will always return nullptr. Where possible, it is always preferred to seek out the "Unreal" way, especially when dealing with support for Unreal systems such as Blueprint. In this case, we would use ```TempActor->Implements<UCoolInterface>```. Notice that in that example we talk to the ```U``` version of Interface and not the ```I```. It is good practice to standardize your Interface calling so it is highly recommeneded to use the ```Actor->Implements``` approach.
+As we have implemented our Interface on the Blueprint side for the character, if we did ``` ICoolInterface* TempCool = Cast<ICoolInterface>(TempActor)```, it will always return nullptr. Where possible, it is always preferred to seek out the "Unreal" way, especially when dealing with support for Unreal systems such as Blueprint. In this case, we would use ```TempActor->Implements<UCoolInterface>```. 
+
+Notice that in that example we talk to the ```U``` version of Interface and not the ```I```. It is good practice to standardize your Interface calling so it is highly recommeneded to use the ```Actor->Implements``` approach.
 
 To see a Blueprint version of dealing with this C++ created Interface, we can check ```BP_Chest```.
 
@@ -125,7 +127,7 @@ When EnteredInteractionZone has been triggered, you can see that we are storing 
 
 Taking a look at the ```InputAction Interact``` function (which is used when the player presses the "Interact" button), we can see that if the ```InteractableActor``` is valid from EnteredInteractionZone then tell that actor to fire off their "InteractRequest" interface function.
 
-Jumping back to BP_Chest, we can see the InteractRequest implementation that if closed, opens and if open, closes the lid of the chest.
+Jumping back to BP_Chest, we can see the InteractRequest implementation says that "If the lid is closed, open the lid and if it is open, close the lid of the chest".
 
 ## How To Create Your Own
 ### Creating a Blueprint Interface
@@ -174,7 +176,7 @@ To call an Interface in C++ code, there are a few ways to do it that change base
 
 ## Extras
 ### Video
-VIDEO HERE
+{% include video id="YwWGJ5BRpQk" provider="youtube" %}
 
 ### Project Files
 The project files for this project (Unreal Engine 5.0 EA) are available here: [PROJECT FILES](https://github.com/KITATUS/KFInterfaces/)
