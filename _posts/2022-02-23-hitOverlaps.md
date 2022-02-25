@@ -4,6 +4,9 @@ date: 2022-02-23T14:55:30-04:00
 categories:
   - UE4
   - UE5
+  - Blueprints
+  - C++
+  - Networking
 tags:
   - Tutorial
   - Blueprints
