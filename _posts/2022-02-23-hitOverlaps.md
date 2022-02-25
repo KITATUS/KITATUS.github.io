@@ -13,7 +13,7 @@ toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 toc_icon: "gamepad"  # corresponding Font Awesome icon name (without fa prefix)
-excerpt: "A look at how Event Dispatches (and Delegates) work in Unreal Engine and how you can use them to handle communication between multiple actors."
+excerpt: "A look at Hits and Overlaps for both Blueprints and C++ for both Single-Player and Multiplayer scenarios."
 header:
   overlay_image: /assets/images/tutorials/hitOverlap/hitOverlap_001.jpg
   teaser: /assets/images/tutorials/hitOverlap/hitOverlap_001.jpg
