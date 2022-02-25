@@ -45,7 +45,7 @@ In ```BP_Character_Example_01```, you can see that it has no knowledge of any ov
 The Blueprint graph for BP_Target_Overlap.
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-```BP_Target_Overlap``` contains both BeginOverlap and EndOverlap events created by right clicking the BoxCollision (```Box```) in the Component Heirachy and selecting "Add Event -> Add OnComponentBeginOverlap" and "Add Event -> OnComponentEndOverlap". These events trigger when this component has another overlap with them and when that overlap ends. 
+```BP_Target_Overlap``` contains both BeginOverlap and EndOverlap events created by right clicking the BoxCollision (```Box```) in the Component Heirachy and selecting "Add Event -> Add OnComponentBeginOverlap" and "Add Event -> OnComponentEndOverlap". These events trigger when this component has another actor overlap with them and when that overlap ends. 
 
 **Note:** If you wanted to filter out specific actors for this overlap event, you could either cast from the "OtherActor" pin or set the collision response in the Details of the BoxCollision accordingly (such as ignoring all actors of all types apart from Pawn, which you would set to Overlap).
 {: .notice--info}
@@ -58,7 +58,7 @@ When BeginOverlap is triggered, we check to see if that other actor is ```BP_Cha
 The Blueprint graph for BP_Target.
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-```BP_Target``` has a large target mesh with automatically generated convex collision applied to it. Like with ```BP_Target_Overlap```, ```BP_Target``` has an OnComponentHit event generated via right clicking the StaticMesh actor and selecting "Add Event -> Add OnComponentHit". When the StaticMesh has been hit, we check to see if it was a projectile that the mesh. If it was, play a sound and increase our score. 
+```BP_Target``` has a large target mesh with automatically generated convex collision applied to it. Like with ```BP_Target_Overlap```, ```BP_Target``` has an OnComponentHit event generated via right clicking the StaticMesh actor and selecting "Add Event -> Add OnComponentHit". When the StaticMesh has been hit, we check to see if it was a projectile that hit the mesh. If it was, play a sound and increase our score. 
 
 **Note:** You can also use the same tricks for Hits as you can with Overlaps, either casting the OtherActor result or setting the CollisionProfile to only allow specific actors to trigger them.
 {: .notice--info}
