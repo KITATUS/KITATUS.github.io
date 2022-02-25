@@ -88,7 +88,7 @@ If we take a look inside the ```BeginPlay()``` function, we can see that we get 
 
 <script src="https://gist.github.com/KITATUS/f8178526c0793ff9c540991c03fd526c.js"></script>
 
-Looking at the first of the two lines of code what we are doing is getting the Box Component and getting the Delegate for BeginOverlap. From where, we are telling that Delegate that we wish to be informed when it is fired. We do this by telling it to execute a function in our class and specifically we want it to trigger the ```OverlapBegin``` function.
+Looking at the first of the two lines of code what we are doing is getting the Box Component and getting the Delegate for BeginOverlap. From there, we are telling that Delegate that we wish to be informed when it is fired. We do this by telling it to execute a function in our class and specifically that we want it to trigger the ```OverlapBegin``` function.
 
 Because of what the Delegate will broadcast (in terms of variables) matches with that function, it will correctly passthrough the data and execute our function when the Delegate is triggered.
 
@@ -110,18 +110,18 @@ Specifically the part at the end of the class; the Hit function itself.
 
 <script src="https://gist.github.com/KITATUS/96633c7c739edf0ee35477ec17e9ecfd.js"></script>
 
-To fully understand the variables provided, we can head over to the .cpp file to something similar to what we had when dealing with the Overlaps.
+To fully understand the variables provided, we can head over to the .cpp file to see something similar to what we had when dealing with the Overlaps.
 
 <script src="https://gist.github.com/KITATUS/7896cdd70e03a24deef6280a9827abcb.js"></script>
 
-Just like with the Overlaps, on ```BeginPlay()```, we are grabbing the component we want to listen out for Hits on then we are grabbing the Hit Delegate. From where, we're adding our UFUNCTION to trigger when this Delegate broadcasts. Again, it is important to remember the why we have put this on ```BeginPlay()``` and not in the constructor, as well as how to find the variables the Delegate requires to be present to correctly broadcast to our function. These are covered in the Overlap section so jump back if you need a refresher.
+Just like with the Overlaps, on ```BeginPlay()```, we are grabbing the component we want to listen out for Hits on then we are grabbing the Hit Delegate. From there, we're adding our UFUNCTION to trigger when this Delegate broadcasts. Again, it is important to remember the why we have put this on ```BeginPlay()``` and not in the constructor, as well as how to find the variables the Delegate requires to be present to correctly broadcast to our function. These are covered in the Overlap section so jump back if you need a refresher.
 
 <script src="https://gist.github.com/KITATUS/80d5dfbd33cf188c8df1a3eb19d113c9.js"></script>
 
 Just like with the Blueprint this is inspired by (in Example 01), when the hit has been broadcast to us, we are checking to see if it was a projectile. If it was, play a sound, increment our score and update the score in places that are waiting for it.
 
 ### Example #3 - Dunk Tank (Blueprint, Networked)
-Example #03 is similar to the first two examples but slight tweaks to better show alternative options and to offer something a little different. This is a simple multiplayer sample, where one player needs to step on the green trigger to make the target appear. The other player than stands on the red trigger and is able to shoot the target. If the player successfully hits the target, both players will see the chair in the test tube light on fire for three seconds.
+Example #03 is similar to the first two examples but with slight tweaks to better show alternative options and to offer something a little different. This is a simple multiplayer sample, where one player needs to step on the green trigger to make the target appear. The other player than stands on the red trigger and is able to shoot the target. If the player successfully hits the target, both players will see the chair in the test tube light on fire for three seconds.
 
 [![styled-image](/assets/images/tutorials/hitOverlap/hitOverlap_006.jpg "A screenshot of Example 03"){: .align-center style="width: 100%;"}](/assets/images/tutorials/interfaces/hitOverlap_006.jpg)
 A screenshot of Example 03.
@@ -131,7 +131,7 @@ A screenshot of Example 03.
 {: .notice--info}
 
 #### Overlap
-First we can look at ```BP_Target_Overlap_Red``` to show an example. approach for multiplayer overlaps. Inside the graph, you can see a method similar to what we have done previously. Within ```BP_Target_Overlap_Red```, we have OverlapBegin and OverlapEnd events. From here, we are casting to the character and sending off for a specific event (in this case to enable or disable shooting). 
+First we can look at ```BP_Target_Overlap_Red``` to show an example approach for multiplayer overlaps. Inside the graph, you can see a method similar to what we have done previously. Within ```BP_Target_Overlap_Red```, we have OverlapBegin and OverlapEnd events. From here, we are casting to the character and sending off for a specific event (in this case to enable or disable shooting). 
 
 The main difference this time is that we're speaking directly to the CLIENT's version of the character in a multiplayer match as opposed to just whatever version overlapped with us. The reason for this is to protect against a slow network and to ensure this event is correctly fired on both the client and the server.
 
@@ -156,7 +156,7 @@ The Blueprint graph for BP_Target_Overlap_Green.
 #### Hit
 ```BP_MPTarget``` is our multiplayer version of the Target that existed within the previous examples. You'll see that the approach taken is quite similar to the previous examples, only instead this time we are triggering a server event at the end of the OnComponentHit execution line. There is also some extra nodes this time around in the Blueprint but these only exist to add the animation to the actor and are not related to making this class more multiplayer friendly.
 
-[![styled-image](/assets/images/tutorials/hitOverlap/hitOverlap_009.jpg "The Blueprint graph for BP_MPTarget"){: .align-center style="width: 100%;"}](/assets/images/tutorials/interfaces/hitOverlap_009.jpg)
+[![styled-image](/assets/images/tutorials/hitOverlap/hitOverlap_010.jpg "The Blueprint graph for BP_MPTarget"){: .align-center style="width: 100%;"}](/assets/images/tutorials/interfaces/hitOverlap_010.jpg)
 The Blueprint graph for BP_MPTarget.
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
@@ -192,7 +192,7 @@ Within ```KFMPShootTarget.cpp```, you can see that we bind the Hit in the BeginP
 
 ## Extras
 ### Video
-Coming soon!
+{% include video id="-ORQ9f-a264" provider="youtube" %}
 
 ### Project Files
 The project files for this project (Unreal Engine 5.0 EA) are available here: [PROJECT FILES](https://github.com/KITATUS/KFServerOverlaps)
