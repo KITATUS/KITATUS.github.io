@@ -18,8 +18,8 @@ toc_sticky: true
 toc_icon: "gamepad"  # corresponding Font Awesome icon name (without fa prefix)
 excerpt: "A breakdown of how to spawn a friendly player when they join a session in progress in a co-operative Unreal Engine game."
 header:
-  overlay_image: /assets/images/tutorials/joinInProgress/ed_001.jpg
-  teaser: /assets/images/tutorials/joinInProgress/ed_001.jpg
+  overlay_image: /assets/images/tutorials/joinInProgress/jip_001.jpg
+  teaser: /assets/images/tutorials/joinInProgress/jip_001.jpg
 ---
 
 **Note:** The screenshots used in this guide are from Unreal Engine 5 (Early Access) but everything here is compatible with most previous and future versions of Unreal Engine (4 / 5 / beyond).
