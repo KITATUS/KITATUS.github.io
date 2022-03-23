@@ -22,9 +22,6 @@ There are four main overall stages of the game development process that are brok
 
 Today, we’re going to take a closer look at the average game development pipeline to understand what happens when and how your favourite games are put together.
 
-[![styled-image](/assets/images/tutorials/productionpipeline/pp_001.jpg ""){: .align-center style="width: 100%;"}](/assets/images/tutorials/productionpipeline/pp_001.jpg) 
-{: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
-
 ## Pre-Production
 The Pre-Production phase is often thought of to be “the calm before the storm” but this isn’t exactly true in the case of video-game development; Pre-production can be a very hectic time many games never make it outside of and some even find themselves back into this stage of production. 
 
