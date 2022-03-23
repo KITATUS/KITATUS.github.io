@@ -127,7 +127,7 @@ This is a step that has grown massively in use at studios within recent years. A
 
 Some studios use this time to spin up work for the post-release DLC plans, depending on the size and complexity of the planned post-launch content.
 
-### Launch / Post-Release
+## Launch / Post-Release
 In the past this major phase would have been the end of the project (and the start of a next one) but as with Post-Certification, this phase is now usually used for bug fixes and DLC.
 
 This phase is usually dealt with by a fraction of the team size of the base game so that the majority of the team can be moved onto the next project.
