@@ -68,7 +68,7 @@ It is not uncommon for funding or greenlights to not be awarded. When this happe
 
 This is usually the last step in pre-production before the move into full production. If a project survives this last gauntlet, production begins. 
 
-We have previously discussed the fact that a project can end up back in Pre-Production and it is more often than not projects that rely on greenlights / funding that end up in such a situation.
+We have previously discussed the fact that a project can end up back in Pre-Production. It is more often than not projects that rely on greenlights / funding that end up in such a situation.
 
 ## Production
 This is another phase that varies wildly between studios and projects. There is no set in stone step-by-step guide for Production that is adopted throughout the industry (a common trend for almost everything game development related). 
