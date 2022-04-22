@@ -25,7 +25,8 @@ This page is a collection of some of the common terminology you'll find in the g
 ### A
 
 AA (Double A)
-: 
+: An unofficial name given to studios, publishers or developers that are larger than the Indie offerings but don't quite fit the criteria for AAA. 
+: <em>Example: PlayerUnknown's Battlegrounds and Fall Guys are seen by most to be AA.</em>
 
 AAA (Triple A)
 : Triple A is term given to games, game studios or publishers who release games that require large budgets (and usually large marketing budgets) to create and release.
