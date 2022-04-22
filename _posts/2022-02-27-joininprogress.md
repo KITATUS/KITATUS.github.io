@@ -47,7 +47,7 @@ By now, we have a spawn transform to use, so lets use that and spawn the new pla
 The reason behind the Initialize event would be to do everything that you'd normally do in the BeginPlay (such as locally setting the camera for a player) as it might not have been ready yet as the player didn't immediately possess it.
 
 ## Blueprint
-Let's first look at how we would implement this in Blueprint. Inside the GameMode blueprint, we have hooked into the function for  ```HandleStartingNewPlayer``` by adding the Blueprint exposed event for it. From where, we pass into a custom function;  ```SpawnMPChar``` , which takes in the PlayerController output from   ```HandleStartingNewPlayer```.
+Let's first look at how we would implement this in Blueprint. Inside the GameMode blueprint, we have hooked into the function for  ```HandleStartingNewPlayer``` by adding the Blueprint exposed event for it. From there, we pass into a custom function;  ```SpawnMPChar``` , which takes in the PlayerController output from   ```HandleStartingNewPlayer```.
 
 [![styled-image](/assets/images/tutorials/joinInProgress/jip_002.jpg "The Blueprint graph for GM_Example01"){: .align-center style="width: 100%;"}](/assets/images/tutorials/joinInProgress/jip_002.jpg)
 The Blueprint graph for GM_Example01.
@@ -58,13 +58,13 @@ Inside  ```SpawnMPChar``` we first check if this player already has a pawn. In t
 **Note:** Did you know that you can reference inputs from functions in Blueprint without having to have wires everywhere? Once the function has been created, compile and save then when you open the "All actions for this Blueprint Window" (usually by right clicking), you can find and use the variable!
 {: .notice--info}
 
-If the player controller doesn't have an accociated character, we need to create them one.
+If the player controller doesn't have an associated character, we need to create them one.
 
 [![styled-image](/assets/images/tutorials/joinInProgress/jip_003.jpg "The start of SpawnMPChar"){: .align-center style="width: 100%;"}](/assets/images/tutorials/joinInProgress/jip_003.jpg)
 The start of SpawnMPChar.
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-We clear our the SpawnTransform to ensure we're not accidently overwriting any existing data (normally this won't be the case but it doesn't hurt to be careful!) then we try and find an existing character in the scene (to spawn beside). We grab the first value that comes back from the  ```GetAllActorsOfClass```  node and check to see if it returned valid or if we didn't find anything.
+We clear out the SpawnTransform to ensure we're not accidentally  overwriting any existing data (normally this won't be the case but it doesn't hurt to be careful!) then we try and find an existing character in the scene (to spawn beside). We grab the first value that comes back from the  ```GetAllActorsOfClass```  node and check to see if it returned valid or if we didn't find anything.
 
 **Note:** If you were dealing with a game where you only wanted people to spawn at a player location if certain criteria were met; such as location they were at or what team they're on - this would be the perfect time to do it.
 {: .notice--info}
@@ -112,7 +112,7 @@ If we dive into the function; you'll notice that we do pretty much everything we
 
 First up, we're checking if the player coming in already has a pawn, specifically (this time) if they have an Example02Char. If they do, we don't need to do anything but if they don't we now check to see if they have a pawn that isn't Example02Char. If they do, we don't want that so let's destroy it.
 
-Now we've got a blank slate to spawn them an Example02 character. From here, we try and find any characters that already exist in the map. If we find on, we use their Transform and if not, we find the PlayerStart and use the transform for that.
+Now we've got a blank slate to spawn them an Example02 character. From here, we try and find any characters that already exist in the map. If we find one, we use their Transform and if not, we find the PlayerStart and use the transform for that.
 
 <script src="https://gist.github.com/KITATUS/96e5c6378fa7e6ca40dfc7f20387fcc2.js"></script>
 

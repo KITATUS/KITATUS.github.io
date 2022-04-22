@@ -99,7 +99,7 @@ Just under the ```UCLASS()```, the Interface gets added on the line ``` class KF
 
 Near the bottom, we can see the implemented function for ```InteractRequest``` on the line: ```virtual void InteractRequest_Implementation(AActor* InteractableActor) override;```. The ```_Implementation``` part is due to the fact we made our originating function a ```BlueprintNativeEvent```.
 
-Im KF_Interact_Text.cpp we have an example of using the interface in C++ to communicate to a Blueprint:
+In KF_Interact_Text.cpp we have an example of using the interface in C++ to communicate to a Blueprint:
 
 <script src="https://gist.github.com/KITATUS/0cfde4c3a7fae78ed1f463e56d1e5d9a.js"></script>
 

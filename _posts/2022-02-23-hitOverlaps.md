@@ -45,7 +45,7 @@ In ```BP_Character_Example_01```, you can see that it has no knowledge of any ov
 The Blueprint graph for BP_Target_Overlap.
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-```BP_Target_Overlap``` contains both BeginOverlap and EndOverlap events created by right clicking the BoxCollision (```Box```) in the Component Heirachy and selecting "Add Event -> Add OnComponentBeginOverlap" and "Add Event -> OnComponentEndOverlap". These events trigger when this component has another actor overlap with them and when that overlap ends. 
+```BP_Target_Overlap``` contains both BeginOverlap and EndOverlap events created by right clicking the BoxCollision (```Box```) in the Component Hierarchy and selecting "Add Event -> Add OnComponentBeginOverlap" and "Add Event -> OnComponentEndOverlap". These events trigger when this component has another actor overlap with them and when that overlap ends. 
 
 **Note:** If you wanted to filter out specific actors for this overlap event, you could either cast from the "OtherActor" pin or set the collision response in the Details of the BoxCollision accordingly (such as ignoring all actors of all types apart from Pawn, which you would set to Overlap).
 {: .notice--info}
@@ -94,15 +94,15 @@ Because of what the Delegate will broadcast (in terms of variables) matches with
 
 One important trick to know is the ability to find out what variables are needed for the bind to correctly take place. One trick is to write out the "AddDynamic" code (which in our BeginOverlap case is ```Box->OnComponentBeginOverlap.AddDynamic```) and head to the definition of OnComponentBeginOverlap (by clicking ```OnComponentBeginOverlap``` and pressing F12 in Visual Studio / Rider). This should take you to the Delegate that is being sent through. 
 
-Go to the declaration of the Delegate (Remember, F12 is the hotkey for VS/Rider) and you'll see the function we need. Simply copy the variables and paste them into the function declaration of our intended UFUNCTION. Be sure to remove the extra commas that are added as part of the Delegate declaration and your function now matches the Delegate and will compatible with the delegate broadcast.
+Go to the declaration of the Delegate (Remember, F12 is the hotkey for VS/Rider) and you'll see the function we need. Simply copy the variables and paste them into the function declaration of our intended UFUNCTION. Be sure to remove the extra commas that are added as part of the Delegate declaration and your function now matches the Delegate and will be compatible with the delegate broadcast.
 
-The location of our AddDynamic are important to note; Adding them to the constructor means that what we are trying to bind to is not ensured to be ready yet and can often lead to crashes. We also do not need these binds whilst in the editor - it is strictly a runtime requirement. Because of this, you should place binds such as Overlaps, Hits and similar such delegate bindings on BeginPlay - which fires once the game has started and this object has been created.
+The location of our AddDynamic is important to note; Adding them to the constructor means that what we are trying to bind to is not ensured to be ready yet and can often lead to crashes. We also do not need these binds whilst in the editor - it is strictly a runtime requirement. Because of this, you should place binds such as Overlaps, Hits and similar such delegate bindings on BeginPlay - which fires once the game has started and this object has been created.
 
 In our functions for ```OverlapBegin``` and ```OverlapEnd```, we are doing the same thing we did back in the Blueprint sample; we check to see if the Actor that triggered this Overlap is the player. If they are, then set if they can or can't shoot.
 
 #### Hit
 
-As we've said a few times before this, Hits and Overlaps are share some commonalities, especially when it comes to how they broadcast to other classes. C++ Hits are no exception. We can see this with the declaration of our Hit function within ```KFShootTarget.h``` which is strikingly similar to how we handled Overlaps in the previous class.
+As we've said a few times before this, Hits and Overlaps share some commonalities, especially when it comes to how they broadcast to other classes. C++ Hits are no exception. We can see this with the declaration of our Hit function within ```KFShootTarget.h``` which is strikingly similar to how we handled Overlaps in the previous class.
 
 <script src="https://gist.github.com/KITATUS/1a78a3128182515f15a0dafa084ad47e.js"></script>
 
@@ -118,10 +118,10 @@ Just like with the Overlaps, on ```BeginPlay()```, we are grabbing the component
 
 <script src="https://gist.github.com/KITATUS/80d5dfbd33cf188c8df1a3eb19d113c9.js"></script>
 
-Just like with the Blueprint this is inspired by (in Example 01), when the hit has been broadcast to us, we are checking to see if it was a projectile. If it was, play a sound, increment our score and update the score in places that are waiting for it.
+Just like with the Blueprint this is inspired by (in Example 01) when the hit has been broadcast to us, we are checking to see if it was a projectile. If it was, play a sound, increment our score and update the score in places that are waiting for it.
 
 ### Example #3 - Dunk Tank (Blueprint, Networked)
-Example #03 is similar to the first two examples but with slight tweaks to better show alternative options and to offer something a little different. This is a simple multiplayer sample, where one player needs to step on the green trigger to make the target appear. The other player than stands on the red trigger and is able to shoot the target. If the player successfully hits the target, both players will see the chair in the test tube light on fire for three seconds.
+Example #03 is similar to the first two examples but with slight tweaks to better show alternative options and to offer something a little different. This is a simple multiplayer sample, where one player needs to step on the green trigger to make the target appear. The other player then stands on the red trigger and is able to shoot the target. If the player successfully hits the target, both players will see the chair in the test tube light on fire for three seconds.
 
 [![styled-image](/assets/images/tutorials/hitOverlap/hitOverlap_006.jpg "A screenshot of Example 03"){: .align-center style="width: 100%;"}](/assets/images/tutorials/interfaces/hitOverlap_006.jpg)
 A screenshot of Example 03.
@@ -131,7 +131,7 @@ A screenshot of Example 03.
 {: .notice--info}
 
 #### Overlap
-First we can look at ```BP_Target_Overlap_Red``` to show an example approach for multiplayer overlaps. Inside the graph, you can see a method similar to what we have done previously. Within ```BP_Target_Overlap_Red```, we have OverlapBegin and OverlapEnd events. From here, we are casting to the character and sending off for a specific event (in this case to enable or disable shooting). 
+First, we can look at ```BP_Target_Overlap_Red``` to show an example approach for multiplayer overlaps. Inside the graph, you can see a method similar to what we have done previously. Within ```BP_Target_Overlap_Red```, we have OverlapBegin and OverlapEnd events. From here, we are casting to the character and sending off for a specific event (in this case to enable or disable shooting). 
 
 The main difference this time is that we're speaking directly to the CLIENT's version of the character in a multiplayer match as opposed to just whatever version overlapped with us. The reason for this is to protect against a slow network and to ensure this event is correctly fired on both the client and the server.
 
@@ -145,16 +145,16 @@ If you follow the event that is fired on the player's character, you'll see that
 The Client-first approach in BP_Character_Example03.
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
-Naturally this method is not very secure but ensures that when playing online, the person playing as the client does not have to wait around for the server's response before acting, reducing the feeling of lag.
+Naturally, this method is not very secure but ensures that when playing online, the person playing as the client does not have to wait around for the server's response before acting, reducing the feeling of lag.
 
-If we take a look at ```BP_target_Overlap_Green``` we can see an alternative approach to overlaps in multiplayer. Within this Blueprint we immediately send the result of BeginOverlap and EndOverlap to the server to deal with. The server then decides what to do - which in this case is confirm its a Example 03 Character that caused the Overlap to trigger and then tell both the server and client version of the Character to play the show (or hide) animation on the target Actor, which ironically in this case is an actual Target.
+If we take a look at ```BP_target_Overlap_Green``` we can see an alternative approach to overlaps in multiplayer. Within this Blueprint, we immediately send the result of BeginOverlap and EndOverlap to the server to deal with. The server then decides what to do - which in this case is confirm its a Example 03 Character that caused the Overlap to trigger and then tell both the server and client version of the Character to play the show (or hide) animation on the target Actor, which ironically, in this case, is an actual Target.
 
 [![styled-image](/assets/images/tutorials/hitOverlap/hitOverlap_009.jpg "The Blueprint graph for BP_Target_Overlap_Green"){: .align-center style="width: 100%;"}](/assets/images/tutorials/interfaces/hitOverlap_009.jpg)
 The Blueprint graph for BP_Target_Overlap_Green.
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
 #### Hit
-```BP_MPTarget``` is our multiplayer version of the Target that existed within the previous examples. You'll see that the approach taken is quite similar to the previous examples, only instead this time we are triggering a server event at the end of the OnComponentHit execution line. There is also some extra nodes this time around in the Blueprint but these only exist to add the animation to the actor and are not related to making this class more multiplayer friendly.
+```BP_MPTarget``` is our multiplayer version of the Target that existed within the previous examples. You'll see that the approach taken is quite similar to the previous examples, only instead this time we are triggering a server event at the end of the OnComponentHit execution line. There are also some extra nodes this time around in the Blueprint but these only exist to add the animation to the actor and are not related to making this class more multiplayer friendly.
 
 [![styled-image](/assets/images/tutorials/hitOverlap/hitOverlap_010.jpg "The Blueprint graph for BP_MPTarget"){: .align-center style="width: 100%;"}](/assets/images/tutorials/interfaces/hitOverlap_010.jpg)
 The Blueprint graph for BP_MPTarget.
@@ -174,7 +174,7 @@ Within the .h file, you'll notice that both BeginOverlap and EndOverlap are writ
 
 <script src="https://gist.github.com/KITATUS/6a7fcfe20dd3724b93f4a5ed63b33e88.js"></script>
 
-Heading over to the .cpp, you can see that we bind our Overlaps exactly as we did before. However, when we look at the implementation of our functions you can see we immediately call to ```Server_CheckOverlap()``` - just like we did in Example03. It is a little less clear here why we are doing this so to re-iterate this is an example of a server-authorative overlap, where we immediately tell the server "Hey, this overlap happened can you make a judgement call on what to do please?"
+Heading over to the .cpp, you can see that we bind our Overlaps exactly as we did before. However, when we look at the implementation of our functions you can see we immediately call to ```Server_CheckOverlap()``` - just like we did in Example03. It is a little less clear here why we are doing this so to re-iterate this is an example of a server-authoritative overlap, where we immediately tell the server "Hey, this overlap happened can you make a judgement call on what to do please?"
 
 <script src="https://gist.github.com/KITATUS/0525f94e8f1c0b99f85b0b8e958e594c.js"></script>
 
