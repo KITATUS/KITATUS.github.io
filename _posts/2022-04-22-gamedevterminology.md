@@ -96,6 +96,9 @@ P2W (Pay To Win)
 Pathfinding
 : This is the name given to a system that allows an AI controlled character or object to find a path to a location within the game world. Normally, a starting point and destination are fed into pathfinding systems and other variables are then layered on top to find the clearest logical path for the AI controlled entity to take.
 
+Physically Based Rendering (PBR)
+: A rendering method that aims to render realistic game worlds by using realistic lighting and surface models.
+
 ### Q
 
 ### R
