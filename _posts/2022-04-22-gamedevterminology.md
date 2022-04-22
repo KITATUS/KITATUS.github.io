@@ -27,14 +27,17 @@ This page is a collection of some of the common terminology you'll find in the g
 AA (Double A)
 : An unofficial name given to studios, publishers or developers that are larger than the Indie offerings but don't quite fit the criteria for AAA. 
 : <em>Example: PlayerUnknown's Battlegrounds and Fall Guys are seen by most to be AA.</em>
+{: .grey .bold}
 
 AAA (Triple A)
 : Triple A is term given to games, game studios or publishers who release games that require large budgets (and usually large marketing budgets) to create and release.
 : <em>Example: Halo Infinite and Call of Duty are classed as AAA, Inscryption and Super Meat Boy are not.</em>
+{: .grey .bold}
 
 Abandonware
 : Games that are no longer sold or supported by whomever owns the rights to the title. It is a common misconception that Abandonware titles are in the Public Domain or are Copyright Free - this is incorrect in most cases but usually it does not make financial sense for a company to chase copyright infringement of Abandonware titles due to to their lack of commerical value.
 : <em>Example: The Oregon Trail (1971) is classed as Abandonware. </em>
+{: .grey .bold}
 
 Artifical Intelligence (A.I)
 : A.I in video-games means the fake brain the computer uses to make non playable characters act and react to certain conditions in video-games. This can be something as simple as a character that moves to a location (pathfinding) to a highly reactive enemy character that can anticipate the player's next move and act accordingly.
@@ -58,6 +61,7 @@ Artifical Intelligence (A.I)
 Indie
 : This has changed in meaning from the past; it used to mean indepedent but now means a game developer (or studio) that creates games with either no publisher or a small-mid sized publisher.
 : <em>Example: Stardew Valley and Celeste are classed as Indie, Horizon Forbidden West and Elden Ring are not. </em>
+{: .grey .bold}
 
 ### J
 
