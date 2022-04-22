@@ -52,6 +52,15 @@ Artifical Intelligence (A.I)
 
 ### F
 
+F2P (Free To Play)
+: A game that does not require an upfront payment to play. 
+: <b><em>Example: Fortnite and Genshin Impact are popular Free to Play games </em></b>
+
+FTP (File Transfer Protocol)
+: An internet protocol used for transfering files between computers. Sometimes used as slang for "Send me this file directly".
+: <b><em>Example: "Can you FTP me the previous build?" </em></b>
+
+
 ### G
 
 ### H
@@ -69,6 +78,9 @@ Indie
 
 ### L
 
+Level Of Detail (LOD)
+: This is the system where the further an object is from the camera, the less detail is rendered. The closer an object is, the more detail is rendered on the object.
+
 ### M
 
 ### N
@@ -76,6 +88,10 @@ Indie
 ### O
 
 ### P
+
+P2W (Pay To Win)
+: A game that does not require an upfront payment to play but there are items you can purchase that make you better than other players (and make it easier for you to win). 
+: <b><em>Example: APB Reloaded was considered to be a Pay-To-Win Game </em></b>
 
 Pathfinding
 : This is the name given to a system that allows an AI controlled character or object to find a path to a location within the game world. Normally, a starting point and destination are fed into pathfinding systems and other variables are then layered on top to find the clearest logical path for the AI controlled entity to take.
