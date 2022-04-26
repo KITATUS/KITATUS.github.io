@@ -120,6 +120,13 @@ Telemetry
 : A system that collects data and sends it back to the server at specific intervals (or events). Usually used for collecting statistics of player behaviour.
 
 ### U
+UI (User Interface)
+: A discipline focused on how the end user interfaces with the in-game menus and HUD (Heads-Up Display).
+: A term given to the collection of menus and visual components that allow the user to interact with the game.
+: <b><em>Example: Title Screens, Main Menus, player Health Bars are all examples of UI. </em></b>
+
+UX (User Experience)
+: Commonly confused with UI (User Interface), User Experience is all about the experience for the end user. This is the bridge between Game Design and the player, ensuring that the experience "feels good" for the player.
 
 ### V
 
