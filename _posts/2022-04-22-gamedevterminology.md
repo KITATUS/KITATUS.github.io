@@ -73,6 +73,8 @@ Indie
 : <b><em>Example: Stardew Valley and Celeste are classed as Indie, Horizon Forbidden West and Elden Ring are not. </em></b>
 
 ### J
+Jira
+: A popular project management tool usually used for sprints and issue tracking. Studios that use Jira usually also use Confluence. This term is sometimes confused with "Projet management tool" due to its overwhelming use in studios across the industry.
 
 ### K
 
@@ -99,13 +101,23 @@ Pathfinding
 Physically Based Rendering (PBR)
 : A rendering method that aims to render realistic game worlds by using realistic lighting and surface models.
 
+Playtest
+: Usually an internal event where some (or all) of the team play a build of the game to check for quality, bugs, test a new feature or to get a "feel" for how the game is currently playing.
+
 ### Q
+Quality Assurance (Q.A)
+: A part of a game development team that regularly checks builds for bugs and problems.
 
 ### R
+RDP (Remote Desktop Protocol)
+: RDP is a protocol for dialing into a computer and controlling it remotely. The term is generally used loosely for anytime you remote into a machine (such as with Parsec, Chrome Remote Desktop, Remote Desktop Connection) .etc
+: <b><em>Example: "I'm working from home today so I'll RDP for the playtest" </em></b>
 
 ### S
 
 ### T
+Telemetry
+: A system that collects data and sends it back to the server at specific intervals (or events). Usually used for collecting statistics of player behaviour.
 
 ### U
 
