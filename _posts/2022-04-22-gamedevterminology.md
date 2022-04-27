@@ -48,15 +48,21 @@ Artifical Intelligence (A.I)
 
 ### D
 
+Denial Of Service Attack (DoS)
+: A malicious attempt to slow down or terminate connections of servers by flooding the target with requests and/or junk data.
+
+Distributed Denial of Service Attack (DDoS)
+: Similar to Denial of Service, Distributed Denial of Service attacks are a DoS attack using multiple endpoints to send the requests and/or junk data.
+
 ### E
 
 ### F
 
-F2P (Free To Play)
+Free To Play (F2P)
 : A game that does not require an upfront payment to play. 
 : <b><em>Example: Fortnite and Genshin Impact are popular Free to Play games </em></b>
 
-FTP (File Transfer Protocol)
+File Transfer Protocol (FTP)
 : An internet protocol used for transfering files between computers. Sometimes used as slang for "Send me this file directly".
 : <b><em>Example: "Can you FTP me the previous build?" </em></b>
 
@@ -78,6 +84,12 @@ Jira
 
 ### K
 
+Kill-Death Ratio (KD) / Kill-Death-Assists (KDA)
+: A number generated from kills divided by deaths, usually used in shooter games. In some titles, such as League of Legends and Halo Infinite, assists (helping another player kill someone without firing the killing blow yourself) are also counted (KDA). Note that some games count how much an assist is worth differently (Halo Infinite counts an assist as 0.333 when a kill is worth 1).
+: <b><em>Example for KD: 10 kills and 5 deaths is a 2.0 KD [Kills / Deaths]</em></b>
+: <b><em>Example for KDA: 10 kills, 5 deaths and 5 Assists is a 3.0 KDA  [(Kills + Assists) / Deaths]</em></b>
+
+
 ### L
 
 Level Of Detail (LOD)
@@ -85,13 +97,17 @@ Level Of Detail (LOD)
 
 ### M
 
+Mixed Reality (MR)
+: A combination of Virtual Reality and Augmented Reality with the aim of offering experiences that use interactions in both the physical and virtual worlds.
+: A term used when describing both Virtual Reality and Augmented Reality in the same context.
+
 ### N
 
 ### O
 
 ### P
 
-P2W (Pay To Win)
+Pay To Win (P2W)
 : A game that does not require an upfront payment to play but there are items you can purchase that make you better than other players (and make it easier for you to win). 
 : <b><em>Example: APB Reloaded was considered to be a Pay-To-Win Game </em></b>
 
@@ -105,11 +121,11 @@ Playtest
 : Usually an internal event where some (or all) of the team play a build of the game to check for quality, bugs, test a new feature or to get a "feel" for how the game is currently playing.
 
 ### Q
-Quality Assurance (Q.A)
+Quality Assurance (QA)
 : A part of a game development team that regularly checks builds for bugs and problems.
 
 ### R
-RDP (Remote Desktop Protocol)
+Remote Desktop Protocol (RDP)
 : RDP is a protocol for dialing into a computer and controlling it remotely. The term is generally used loosely for anytime you remote into a machine (such as with Parsec, Chrome Remote Desktop, Remote Desktop Connection) .etc
 : <b><em>Example: "I'm working from home today so I'll RDP for the playtest" </em></b>
 
@@ -119,14 +135,17 @@ RDP (Remote Desktop Protocol)
 Telemetry
 : A system that collects data and sends it back to the server at specific intervals (or events). Usually used for collecting statistics of player behaviour.
 
+Time-To-Kill (TTK)
+: Refers to the time it takes for a specific item to kill an opoonent.
+
 ### U
-UI (User Interface)
+User Experience (UX)
+: Commonly confused with UI (User Interface), User Experience is all about the experience for the end user. This is the bridge between Game Design and the player, ensuring that the experience "feels good" for the player.
+
+User Interface (UI)
 : A discipline focused on how the end user interfaces with the in-game menus and HUD (Heads-Up Display)
 : A term given to the collection of menus and visual components that allow the user to interact with the game.
 : <b><em>Example: Title Screens, Main Menus, player Health Bars are all examples of UI. </em></b>
-
-UX (User Experience)
-: Commonly confused with UI (User Interface), User Experience is all about the experience for the end user. This is the bridge between Game Design and the player, ensuring that the experience "feels good" for the player.
 
 ### V
 
