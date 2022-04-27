@@ -89,7 +89,6 @@ Kill-Death Ratio (KD) / Kill-Death-Assists (KDA)
 : <b><em>Example for KD: 10 kills and 5 deaths is a 2.0 KD [Kills / Deaths]</em></b>
 : <b><em>Example for KDA: 10 kills, 5 deaths and 5 Assists is a 3.0 KDA  [(Kills + Assists) / Deaths]</em></b>
 
-
 ### L
 
 Level Of Detail (LOD)
