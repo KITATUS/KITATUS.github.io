@@ -43,8 +43,13 @@ Artifical Intelligence (A.I)
 : A.I in video-games means the fake brain the computer uses to make non playable characters act and react to certain conditions in video-games. This can be something as simple as a character that moves to a location (pathfinding) to a highly reactive enemy character that can anticipate the player's next move and act accordingly.
 
 ### B
+Bullets-To-Kill (BTK)
+: Refers to the amount of bullets required to kill an opoonent. Usually used in reference to shooters.
 
 ### C
+
+Content Delivery Network (CDN)
+: A collection of servers in multiple locations used for fast servicing of data. Sometimes the term is misused in reference to any external content storage platform (Google Drive .etc)
 
 ### D
 
@@ -73,7 +78,7 @@ File Transfer Protocol (FTP)
 
 ### I
 
-Indie
+Indie (Independent)
 : This has changed in meaning from the past; it used to mean indepedent but now means a game developer (or studio) that creates games with either no publisher or a small-mid sized publisher.
 
 : <b><em>Example: Stardew Valley and Celeste are classed as Indie, Horizon Forbidden West and Elden Ring are not. </em></b>
@@ -135,7 +140,7 @@ Telemetry
 : A system that collects data and sends it back to the server at specific intervals (or events). Usually used for collecting statistics of player behaviour.
 
 Time-To-Kill (TTK)
-: Refers to the time it takes for a specific item to kill an opoonent.
+: Refers to the time it takes for a specific item to kill an opoonent. Usually used in reference to shooters.
 
 ### U
 User Experience (UX)
