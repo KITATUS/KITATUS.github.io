@@ -49,7 +49,7 @@ Bullets-To-Kill (BTK)
 ### C
 
 Content Delivery Network (CDN)
-: A collection of servers in multiple locations used for fast servicing of data. Sometimes the term is misused in reference to any external content storage platform (Google Drive .etc)
+: A collection of servers in multiple locations used for fast servicing of data. Sometimes the term is misused in reference to any external content storage platform (Google Drive .etc).
 
 ### D
 
@@ -73,6 +73,9 @@ File Transfer Protocol (FTP)
 
 
 ### G
+
+Game Design Document (GDD)
+: A highly detailed, descriptive document that acts as the central hub for the design of a project.
 
 ### H
 
@@ -130,12 +133,15 @@ Quality Assurance (QA)
 
 ### R
 Remote Desktop Protocol (RDP)
-: RDP is a protocol for dialing into a computer and controlling it remotely. The term is generally used loosely for anytime you remote into a machine (such as with Parsec, Chrome Remote Desktop, Remote Desktop Connection) .etc
+: RDP is a protocol for dialing into a computer and controlling it remotely. The term is generally used loosely for anytime you remote into a machine (such as with Parsec, Chrome Remote Desktop, Remote Desktop Connection) .etc.
 : <b><em>Example: "I'm working from home today so I'll RDP for the playtest" </em></b>
 
 ### S
 
 ### T
+Technical Design Document (TDD)
+: A document that acts as a blueprint for the software engineers and details requirements, core features and how they should be implemented as well as the tools required to make said features work. This document normally includes answers to questions such as what game engine is going to be used alongside high level diagrams of feature implementations and how the project is going to utilize the technologies of the target platforms. Not to be confused with a Game Design Document (GDD).
+
 Telemetry
 : A system that collects data and sends it back to the server at specific intervals (or events). Usually used for collecting statistics of player behaviour.
 
