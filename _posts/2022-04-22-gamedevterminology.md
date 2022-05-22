@@ -48,6 +48,10 @@ Bullets-To-Kill (BTK)
 
 ### C
 
+Central Processing Unit (CPU)
+: A component that acts as the brain of a computer or console.
+: A name historically given to an AI character, usually in competitive or co-operative modes, to distingish them from a real player in situations where they are intended to act like a real player.
+
 Content Delivery Network (CDN)
 : A collection of servers in multiple locations used for fast servicing of data. Sometimes the term is misused in reference to any external content storage platform (Google Drive .etc).
 
@@ -56,8 +60,14 @@ Content Delivery Network (CDN)
 Denial Of Service Attack (DoS)
 : A malicious attempt to slow down or terminate connections of servers by flooding the target with requests and/or junk data.
 
+Digital Rights Management (DRM)
+: Refers to copy protection, usually software-based but historically has been hardware based - tools utilized to stop people illegally sharing games.
+
 Distributed Denial of Service Attack (DDoS)
 : Similar to Denial of Service, Distributed Denial of Service attacks are a DoS attack using multiple endpoints to send the requests and/or junk data.
+
+DRM-Free
+: Term used to refer to a product that does not have DRM (See: DRM).
 
 ### E
 
@@ -76,6 +86,9 @@ File Transfer Protocol (FTP)
 
 Game Design Document (GDD)
 : A highly detailed, descriptive document that acts as the central hub for the design of a project.
+
+Graphics Processing Unit (GPU)
+: Component within a computer or console that focuses on handling graphics and rendering.
 
 ### H
 
@@ -109,6 +122,9 @@ Mixed Reality (MR)
 : A term used when describing both Virtual Reality and Augmented Reality in the same context.
 
 ### N
+Non-Playable Character (NPC)
+: Similar to other terms for AI controlled characters in a game but tends to refer to static characters that offer story progression or for A.I that is noticibly more dumber than a real player.
+
 
 ### O
 
@@ -147,6 +163,9 @@ Telemetry
 
 Time-To-Kill (TTK)
 : Refers to the time it takes for a specific item to kill an opoonent. Usually used in reference to shooters.
+
+Turing Test
+: Test to see if an A.I can fool someone into thinking it is a real player.
 
 ### U
 User Experience (UX)
