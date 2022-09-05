@@ -14,8 +14,8 @@ toc_sticky: true
 toc_icon: "gamepad"  # corresponding Font Awesome icon name (without fa prefix)
 excerpt: "A look at the method used to get around ViewMode limitations in coreUPTED"
 header:
-  overlay_image: /assets/images/tutorials/\viewmodes/viewmode_001.jpg
-  teaser: /assets/images/tutorials/\viewmodes/viewmode_001.jpg
+  overlay_image: /assets/images/tutorials/viewmodes/viewmode_001.jpg
+  teaser: /assets/images/tutorials/viewmodes/viewmode_001.jpg
 ---
 
 Deep in the underground of KITATUS and Friends HQ, work has been progressing along on coreUPTED - an exciting action-shooter that bases itself in the world of retro aesthetics whilst drowning that vibe in modern rendering techniques. Think PS1-style 3D models, 128x128 nearest-neighbour scaled textures with fully ray-traced lighting and full physically-based rendering.
