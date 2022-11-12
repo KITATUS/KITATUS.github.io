@@ -87,7 +87,8 @@ We are now ready to use this IK Retargeter at runtime.
 # Setup For IK Retargeter
 Duplicate ALS_CharacterBP from 
 > Plugins/AdvancedLocomotionSystemCommunityContent/AdvancedLocomotionV4/Blueprints/CharacterLogic
- and name it “BP_MainChar”.
+
+and name it “BP_MainChar”.
 
 Open your Metahuman Blueprint (“Content > MetaHumans > METAHUMANNAME > BP_METAHUMANNAME”). 
 
