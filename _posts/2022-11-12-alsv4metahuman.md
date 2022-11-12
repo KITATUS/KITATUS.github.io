@@ -50,7 +50,7 @@ You can download the IK Rig for the ALS Character here: [CLICK ME](https://githu
 
 With your project CLOSED, place this file at this location:
 
-"Plugins/ALSV4_CPP/Content/AdvancedLocomotionV4/CharacterAssets/MannequinSkeleton"
+> Plugins/ALSV4_CPP/Content/AdvancedLocomotionV4/CharacterAssets/MannequinSkeleton
 
 # Creating The IK Retargeter
 To create the IK Retargeter, go to your Content Browser and go to Add > Animation > IK Rig >  IK Retargeter.
@@ -85,7 +85,9 @@ Doing this should fix your retargeting issues.
 We are now ready to use this IK Retargeter at runtime.
 
 # Setup For IK Retargeter
-Duplicate ALS_CharacterBP from “Plugins/AdvancedLocomotionSystemCommunityContent/AdvancedLocomotionV4/Blueprints/CharacterLogic” and name it “BP_MainChar”.
+Duplicate ALS_CharacterBP from 
+> Plugins/AdvancedLocomotionSystemCommunityContent/AdvancedLocomotionV4/Blueprints/CharacterLogic
+ and name it “BP_MainChar”.
 
 Open your Metahuman Blueprint (“Content > MetaHumans > METAHUMANNAME > BP_METAHUMANNAME”). 
 
