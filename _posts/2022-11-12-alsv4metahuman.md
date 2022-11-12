@@ -19,9 +19,9 @@ header:
 **Note:** This guide is only applicable to Unreal Engine 5.1.
 {: .notice--success}
 
-Before we begin, please ensure you have downloaded ALS-Community and enabled the plugin in your project. You can download it and learn how to install here: https://github.com/dyanikoglu/ALS-Community
+Before we begin, please ensure you have downloaded ALS-Community and enabled the plugin in your project. You can download it and learn how to install here: [GitHub - dyanikoglu/ALS-Community: Replicated and optimized community version of Advanced Locomotion System V4 for Unreal Engine 5.0 with additional features & bug fixes](https://github.com/dyanikoglu/ALS-Community)
 
-Please also make sure you have a MetaHuman imported into your project and it is setup ready for use. To learn how to do this, please check here: https://docs.metahuman.unrealengine.com/en-US/exporting-metahumans-to-unreal-engine-5/
+Please also make sure you have a MetaHuman imported into your project and it is setup ready for use. To learn how to do this, please check here: [Exporting to Unreal Engine 5](https://docs.metahuman.unrealengine.com/en-US/exporting-metahumans-to-unreal-engine-5/)
 
 This guide is only applicable to MetaHumans imported using the above method.
 
@@ -43,7 +43,7 @@ The secret sauce behind the approach we’ll be taking is the IK Retargeter. The
 
 To make IK Retargeting work, you need IK Rigs. These can be tedious to set up for every mesh you need them to work for but luckily the Metahuman already comes with one and I can supply you with an IK Rig for your ALS character.
 
-You can download the IK Rig for the ALS Character here: CLICK ME https://github.com/KITATUS/KFRetarget/raw/main/IKR_ALS.uasset
+You can download the IK Rig for the ALS Character here: [CLICK ME](https://github.com/KITATUS/KFRetarget/raw/main/IKR_ALS.uasset)
 
 **Note:** This download will only work in Unreal Engine 5.1.
 {: .notice--success}
