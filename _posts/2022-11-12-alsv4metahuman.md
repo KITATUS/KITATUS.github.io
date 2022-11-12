@@ -12,8 +12,8 @@ toc_sticky: true
 toc_icon: "gamepad"  # corresponding Font Awesome icon name (without fa prefix)
 excerpt: "Let's learn about using a Metahuman with Advanced Locomotion (Community)."
 header:
-  overlay_image: /assets/images/tutorials/alsv4/e001.jpg
-  teaser: /assets/images/tutorials/alsv4/e001.jpg
+  overlay_image: /assets/images/tutorials/alsv4/e001.png
+  teaser: /assets/images/tutorials/alsv4/e001.png
 ---
 
 **Note:** This guide is only applicable to Unreal Engine 5.1.
@@ -55,7 +55,7 @@ With your project CLOSED, place this file at this location:
 # Creating The IK Retargeter
 To create the IK Retargeter, go to your Content Browser and go to Add > Animation > IK Rig >  IK Retargeter.
 
-[![styled-image](/assets/images/tutorials/alsv4/e002.jpg "A screenshot of how to find the IK Retargeter"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed002.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e002.png "A screenshot of how to find the IK Retargeter"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed002.png)
 A screenshot of how to find the IK Retargeter
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
@@ -65,7 +65,7 @@ Double-click the created asset.
 
 Under “Target” in the details panel, set the “Target IKRig Asset” to “IK_metahuman” (located at “Content/MetaHumans/Common/Common”)
 
-[![styled-image](/assets/images/tutorials/alsv4/e003.jpg "Target IK Rig"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed003.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e003.png "Target IK Rig"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed003.png)
 Target IK Rig
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
@@ -76,7 +76,7 @@ You may notice that the fingers in preview animations are quite warped. This is 
 # Fixing The Fingers
 Head into the “Chain Mapping” tab and find every “Metacarpal” entry (such as LeftPinkMetacarpal .etc). Set the “Source Chain” of these entries to “None”.
 
-[![styled-image](/assets/images/tutorials/alsv4/e004.jpg "Removing Metacarpal References"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed004.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e004.png "Removing Metacarpal References"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed004.png)
 Removing Metacarpal References
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
@@ -91,7 +91,7 @@ Open your Metahuman Blueprint (“Content > MetaHumans > METAHUMANNAME > BP_META
 
 Copy the Body, Face, Torso, Legs, Feet .etc to your BP_MainChar. Try and copy the same hierarchy and make it a child of the “Mesh”.
 
-[![styled-image](/assets/images/tutorials/alsv4/e005.jpg "Correct Hierarchy"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed005.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e005.png "Correct Hierarchy"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed005.png)
 Correct Hierarchy
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
@@ -100,13 +100,13 @@ Ensure the Location, Rotations and Scales are set up correctly (as per your Meta
 # Animation Blueprint
 Create a new Animation Blueprint (Add > Animation > Animation Blueprint). Use “metahuman_base_skel” as the skeleton.
 
-[![styled-image](/assets/images/tutorials/alsv4/e006.jpg "Animation Blueprint Creation"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed006.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e006.png "Animation Blueprint Creation"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed006.png)
 Animation Blueprint Creation
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
 Open the created asset and head to the Event Graph. Add an “Event Blueprint Initiliaze Animation” node. Grab the output from “Try Get Pawn Owner” and cast it to your “BP_MainChar”. Get “Mesh” from the output pin and promote that to a variable called “Parent Mesh”.
 
-[![styled-image](/assets/images/tutorials/alsv4/e007.jpg "AnimBP Event Graph"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed007.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e007.png "AnimBP Event Graph"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed007.png)
 AnimBP Event Graph
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
@@ -114,13 +114,13 @@ Now head to the Anim Graph.
 
 Create a “Retarget Pose From Mesh” node and connect to the “Result” of the Output Pose. Bring in your “Parent Mesh” variable and connect it to the “Source Mesh Component” pin.
 
-[![styled-image](/assets/images/tutorials/alsv4/e008.jpg "AnimBP Anim Graph"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed008.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e008.png "AnimBP Anim Graph"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed008.png)
 AnimBP Anim Graph
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
 Select the created “Retarget Pose From Mesh” node and set the “IKRetargeter Asset” to the one we created earlier (“IKR_ALS_MH”). Compile, save and close.
 
-[![styled-image](/assets/images/tutorials/alsv4/e009.jpg "Retarget Pose From Mesh Details Panel"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed009.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e009.png "Retarget Pose From Mesh Details Panel"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/ed009.png)
 Retarget Pose From Mesh Details Panel
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
@@ -131,7 +131,7 @@ Head to the Construction Script. Grab the “Body” variable (from the Componen
 
 Now bring in all your other Metahuman meshes (Face, Head .etc) and connect them to the “Target” pin of the Set Leader Pose Component node. Ensure the node is connected to the output pin of your Construction Script function input.
 
-[![styled-image](/assets/images/tutorials/alsv4/e010.jpg "BP_MainChar Construction Script"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/e010.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e010.png "BP_MainChar Construction Script"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/e010.png)
 BP_MainChar Construction Script
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
@@ -142,13 +142,13 @@ If we set the “Mesh” to “Hidden in-game” then this means our Metahuman w
 
 To get around this, we can create a new Material. Call it “M_Invis”. Set the blend mode to “Translucent”, the shading model to “Unlit” and set Cast Raytraced Shadows to false.
 
-[![styled-image](/assets/images/tutorials/alsv4/e011.jpg "M_Invis Details Panel"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/e011.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e011.png "M_Invis Details Panel"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/e011.png)
 M_Invis Details Panel
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
 Now create a “Constant”, set it to 0 and connect to the Opacity. Compile and Save and head back to the BP_MainChar.
 
-[![styled-image](/assets/images/tutorials/alsv4/e012.jpg "M_Invis"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/e012.jpg)
+[![styled-image](/assets/images/tutorials/alsv4/e012.png "M_Invis"){: .align-center style="width: 100%;"}](/assets/images/tutorials/alsv4/e012.png)
 M_Invis
 {: style="text-align: center; font-size:0.7em; font-style: italic; color: grey;"}
 
