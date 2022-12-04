@@ -143,7 +143,7 @@ Select “Mesh” and set “Cast Shadow” to false.
 
 If we set the “Mesh” to “Hidden in-game” then this means our Metahuman won’t work. Not sure if this will get fixed in the future or if it is an intentional feature. 
 
-**Note:** UPDATE: Thanks to [Gambello](https://www.youtube.com/channel/UC1W2z0IMzc-NZZQ9ne3FAig) for a fix: When you set the Mesh to "Hidden" - you can go to Optimization > Advanced and set "Visibily Based Anim Tick Option" to "Always Tick Pose And Refresh Bones". This will circumvent the need for the invisible textures below. Thanks Gambello!
+**Note:** UPDATE: Thanks to [Gambello](https://www.youtube.com/channel/UC1W2z0IMzc-NZZQ9ne3FAig) for a fix: When you set the Mesh to "Hidden" - you can go to Optimization > Advanced and set "Visibily Based Anim Tick Option" to "Always Tick Pose And Refresh Bones". This will circumvent the need for the invisible materials below. Thanks Gambello!
 {: .notice--success}
 
 To get around this, we can create a new Material. Call it “M_Invis”. Set the blend mode to “Translucent”, the shading model to “Unlit” and set Cast Raytraced Shadows to false.
