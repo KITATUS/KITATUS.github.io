@@ -11,8 +11,8 @@ toc_sticky: true
 toc_icon: "gamepad"  # corresponding Font Awesome icon name (without fa prefix)
 excerpt: "Learn about the KITATUS and Friends Micro-Game Initiative"
 header:
-  overlay_image: /assets/images/games/mg_01.jpg
-  teaser: /assets/images/games/mg_01.jpg
+  overlay_image: /assets/images/games/mg_01.png
+  teaser: /assets/images/games/mg_01.png
 ---
 
 ## What Are KxF Micro-Games?
