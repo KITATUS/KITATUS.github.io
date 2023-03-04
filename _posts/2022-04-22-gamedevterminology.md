@@ -263,6 +263,8 @@ Kill-Death Ratio (KD) / Kill-Death-Assists (KDA)
 : <b><em>Example for KDA: 10 kills, 5 deaths and 5 Assists is a 3.0 KDA  [(Kills + Assists) / Deaths]</em></b>
 
 ### L
+Line Trace
+: A technique originating from computer graphics rendering involves projecting a straight line or ray from an origin point out into the scene. This technique is commonly used in video games for collision detection, selecting objects, and creating visual effects. It is sometimes referred to as a Raycast.
 
 Level Design
 : The process of creating playable and engaging game environments for players to explore and interact with. It involves the placement of objects, obstacles, enemies, and other elements to create a cohesive and challenging gameplay experience.
@@ -277,7 +279,7 @@ Level Of Detail (LOD)
 
 Middleware
 : Software that developers can use to help build a game or game engine. Middleware can include things like physics engines, audio software, and networking libraries that can save developers time and effort by providing pre-built solutions to common problems.
-: <b><em>Example: WWise, Bink Video, FMOD and Simplygon are all examples of Middlware.</em></b>
+: <b><em>Example: WWise, Bink Video, FMOD and Simplygon are all examples of Middleware.</em></b>
 
 Microtransaction
 : A type of in-game purchase that allows players to buy virtual items, currency, or upgrades with real money. They are called "micro" as they are usually small amounts of money compared to the cost of the game itself.
@@ -326,6 +328,9 @@ Quality Assurance (QA)
 : A part of a game development team that regularly checks builds for bugs and problems.
 
 ### R
+Raycast
+: A technique originating from computer graphics rendering involves projecting a straight line or ray from an origin point out into the scene. This technique is commonly used in video games for collision detection, selecting objects, and creating visual effects. It is sometimes referred to as a Line Trace.
+
 Remote Desktop Protocol (RDP)
 : RDP is a protocol for dialing into a computer and controlling it remotely. The term is generally used loosely for anytime you remote into a machine (such as with Parsec, Chrome Remote Desktop, Remote Desktop Connection) .etc.
 : <b><em>Example: "I'm working from home today so I'll RDP for the playtest" </em></b>
